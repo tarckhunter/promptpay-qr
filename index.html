@@ -5,27 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PromptPay Smart Generator</title>
 
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-      {
-      "symbols": [
-        {
-          "proName": "OANDA:XAUUSD",
-          "title": "Gold / US Dollar (XAUUSD)"
-        }
-      ],
-      "showSymbolLogo": true,
-      "isTransparent": false,
-      "displayMode": "compact",
-      "colorTheme": "light",
-      "locale": "th_TH"
-    }
-      </script>
-    </div>
-    <!-- TradingView Widget END -->
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -316,6 +295,27 @@
     </style>
 </head>
 <body>
+
+<!-- TradingView Widget BEGIN (ย้ายมาไว้ใต้ body และเพิ่ม style ให้อยู่ด้านบนสุด) -->
+<div class="tradingview-widget-container" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "OANDA:XAUUSD",
+      "title": "Gold / US Dollar (XAUUSD)"
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "displayMode": "compact",
+  "colorTheme": "light",
+  "locale": "th_TH"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
 <div class="container">
     <div class="header">
